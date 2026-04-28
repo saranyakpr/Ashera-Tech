@@ -1934,6 +1934,16 @@ footer {
     padding-bottom: 74px;
   }
 
+  .mobile-nav {
+    left: 5%;
+    right: 5%;
+  }
+
+  .hero-inner {
+    max-width: none;
+    text-align: center;
+  }
+
   h1 {
     font-size: clamp(2.4rem, 12vw, 3.8rem);
     letter-spacing: -1.4px;
@@ -1941,6 +1951,8 @@ footer {
 
   .hero-desc {
     font-size: 0.98rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-ctas {
@@ -1957,6 +1969,14 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px 14px;
+    text-align: left;
+  }
+
+  .hero-stats > div {
+    padding: 16px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   .hero-visual-wrap {
@@ -1984,6 +2004,34 @@ footer {
   .hv-badge {
     font-size: 0.68rem;
     padding: 8px 11px;
+  }
+
+  .ai-feature,
+  .ai-card,
+  .srv,
+  .wcard,
+  .tf-metric,
+  .cf,
+  .pcard {
+    border-radius: 20px;
+  }
+
+  .ai-feature,
+  .srv,
+  .cf {
+    padding: 24px 20px;
+  }
+
+  .ai-visual {
+    padding: 18px;
+  }
+
+  .tf-visual {
+    margin-bottom: 16px;
+  }
+
+  .con-item {
+    align-items: flex-start;
   }
 
   .proc {
@@ -2016,15 +2064,36 @@ footer {
     justify-content: center;
     text-align: center;
     line-height: 1.5;
+    padding: 10px 14px;
   }
 
   .hero-stats {
     grid-template-columns: 1fr 1fr;
   }
 
+  .hero-stats > div {
+    padding: 14px 12px;
+  }
+
   .frow,
   .why-cards {
     grid-template-columns: 1fr;
+  }
+
+  .pills {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+
+  .pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pill {
+    flex: 0 0 auto;
   }
 
   .cf {
@@ -2033,6 +2102,12 @@ footer {
 
   .hv-pro-img {
     height: 380px;
+  }
+
+  .hv-img-badge-bottom {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
   }
 
   .hv-img-badge-inner {
@@ -2054,6 +2129,10 @@ footer {
     max-width: none;
   }
 
+  .flinks {
+    gap: 14px;
+  }
+
   .scroll-top-btn {
     right: 18px;
     bottom: 18px;
@@ -2071,6 +2150,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .hero-grid {
+    opacity: 0.55;
+  }
+
+  .hero-graphic-top {
+    display: none;
+  }
+
   .hv-badge-tl,
   .hv-badge-br {
     position: relative;
@@ -2082,6 +2169,26 @@ footer {
 
   .hv-pro-img {
     height: 320px;
+  }
+
+  .ai-feature h3,
+  .con-info h3 {
+    font-size: 1.38rem;
+  }
+
+  .sh {
+    font-size: 1.85rem;
+  }
+
+  .sd,
+  .hero-desc {
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
+  .mobile-nav {
+    padding: 14px;
+    border-radius: 18px;
   }
 
   .ai-feature,
