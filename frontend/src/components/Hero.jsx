@@ -88,11 +88,11 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="hero-mini-panel hero-mini-panel-left reveal">
+          {/* <div className="hero-mini-panel hero-mini-panel-left reveal">
             <span className="hero-mini-kicker">AI rollout</span>
             <strong>Launch copilots faster</strong>
             <p>Governed prompts, secure data paths, and measurable adoption.</p>
-          </div>
+          </div> */}
 
           <div className="hv-badge hv-badge-tl">
             <i className="fas fa-check-circle" style={{ color: '#4ADE80' }}></i> 98.9%
@@ -102,7 +102,7 @@ const Hero = () => {
             <i className="fas fa-bolt" style={{ color: '#FFB300' }}></i> AI Deployed
           </div>
 
-          <div className="hero-mini-panel hero-mini-panel-right reveal">
+          {/* <div className="hero-mini-panel hero-mini-panel-right reveal">
             <div className="hero-mini-stack">
               <span className="hero-mini-dot"></span>
               <span>Secure Microsoft-native workflows</span>
@@ -111,7 +111,7 @@ const Hero = () => {
               <span className="hero-mini-dot hero-mini-dot-cyan"></span>
               <span>Automation, analytics, and cloud in one motion</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

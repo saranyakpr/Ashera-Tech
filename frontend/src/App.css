@@ -594,14 +594,14 @@ h1 {
 }
 
 .hero-mini-panel-left {
-  left: -42px;
-  bottom: 76px;
+  left: -24px;
+  top: 84px;
   animation: cardBob 7s ease-in-out infinite;
 }
 
 .hero-mini-panel-right {
   right: -30px;
-  top: 72px;
+  bottom: 34px;
   display: grid;
   gap: 10px;
   animation: cardBobAlt 6.5s ease-in-out infinite;
@@ -1843,12 +1843,12 @@ footer {
 
   .hero-mini-panel-left {
     left: 14px;
-    bottom: 24px;
+    top: 18px;
   }
 
   .hero-mini-panel-right {
     right: 14px;
-    top: 18px;
+    bottom: 18px;
   }
 
   .tf-grid,
