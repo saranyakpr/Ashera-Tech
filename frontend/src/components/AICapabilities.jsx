@@ -1,3 +1,6 @@
+import bannerImage from '../assets/banner.png'
+import heroGraphic from '../assets/hero.png'
+
 const featureChips = [
   'RAG Architecture',
   'LLM Fine-tuning',
@@ -91,6 +94,22 @@ const AICapabilities = () => {
           </div>
 
           <div className="ai-visual">
+            <div className="ai-visual-preview">
+              <img
+                src={bannerImage}
+                alt="Ashera Tech AI experience preview"
+                className="ai-visual-image"
+              />
+              <img
+                src={heroGraphic}
+                alt=""
+                className="ai-visual-graphic"
+                aria-hidden="true"
+              />
+              <div className="ai-preview-chip">
+                <i className="fas fa-wave-square"></i> Human + AI orchestration
+              </div>
+            </div>
             <div className="ai-visual-lbl">AI Impact Metrics</div>
             {impactMetrics.map((metric) => (
               <div key={metric.label}>
@@ -106,8 +125,12 @@ const AICapabilities = () => {
           </div>
         </div>
 
-        {cards.map((card) => (
-          <div className="ai-card reveal" key={card.title}>
+        {cards.map((card, index) => (
+          <div
+            className="ai-card reveal"
+            key={card.title}
+            style={{ '--reveal-delay': `${index * 90}ms` }}
+          >
             <div className="ai-ico" style={{ color: card.iconColor }}>
               <i className={card.iconClass}></i>
             </div>

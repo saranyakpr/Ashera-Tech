@@ -25,7 +25,6 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -38,9 +37,36 @@ const App = () => {
       { threshold: 0.08 },
     )
 
-    elements.forEach((element) => observer.observe(element))
+    const observedElements = new WeakSet()
 
-    return () => observer.disconnect()
+    const observeRevealElements = () => {
+      const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+
+      elements.forEach((element) => {
+        if (observedElements.has(element) || element.classList.contains('visible')) {
+          return
+        }
+
+        observer.observe(element)
+        observedElements.add(element)
+      })
+    }
+
+    observeRevealElements()
+
+    const mutationObserver = new MutationObserver(() => {
+      observeRevealElements()
+    })
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
+
+    return () => {
+      mutationObserver.disconnect()
+      observer.disconnect()
+    }
   }, [])
 
   return (

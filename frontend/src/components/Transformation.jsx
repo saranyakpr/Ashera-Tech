@@ -1,3 +1,6 @@
+import bannerImage from '../assets/banner.png'
+import heroGraphic from '../assets/hero.png'
+
 const transformationPoints = [
   'Legacy modernisation with zero-downtime migration strategies tailored to your risk tolerance',
   'AI-first roadmap design that embeds intelligence into every business process from day one',
@@ -8,25 +11,25 @@ const transformationPoints = [
 
 const reasons = [
   {
-    icon: '🏅',
+    iconClass: 'fas fa-award',
     title: 'Microsoft Gold Certified',
     description:
       'Highest-tier partnership across cloud, security, and business applications competencies.',
   },
   {
-    icon: '⚡',
+    iconClass: 'fas fa-bolt',
     title: 'Rapid Deployment',
     description:
       'Proven accelerators cut delivery time by 40% without sacrificing quality.',
   },
   {
-    icon: '🔒',
+    iconClass: 'fas fa-lock',
     title: 'Security-First',
     description:
       'Security and compliance embedded in every solution architecture from day one.',
   },
   {
-    icon: '🌍',
+    iconClass: 'fas fa-globe',
     title: '24/7 Support',
     description:
       'Round-the-clock managed services and proactive monitoring globally.',
@@ -35,17 +38,17 @@ const reasons = [
 
 const transformationMetrics = [
   {
-    icon: '📉',
+    iconClass: 'fas fa-chart-line',
     value: '40%',
     label: 'Average cost reduction post-transformation',
   },
   {
-    icon: '🚀',
+    iconClass: 'fas fa-rocket',
     value: '3x',
     label: 'Faster time-to-market for new digital products',
   },
   {
-    icon: '🧠',
+    iconClass: 'fas fa-brain',
     value: '60%',
     label: 'Increase in data-driven decisions across leadership',
   },
@@ -80,10 +83,34 @@ const Transformation = () => {
         </div>
 
         <div className="reveal-right">
+          <div className="tf-visual">
+            <img
+              src={bannerImage}
+              alt="Microsoft AI transformation workspace"
+              className="tf-visual-image"
+            />
+            <img
+              src={heroGraphic}
+              alt=""
+              className="tf-visual-graphic"
+              aria-hidden="true"
+            />
+            <div className="tf-visual-badge">
+              <i className="fas fa-sparkles"></i>
+              <span>Unified apps, data, and AI delivery</span>
+            </div>
+          </div>
+
           <div className="why-cards">
-            {reasons.map((reason) => (
-              <div className="wcard" key={reason.title}>
-                <div className="wcard-ico">{reason.icon}</div>
+            {reasons.map((reason, index) => (
+              <div
+                className="wcard"
+                key={reason.title}
+                style={{ '--reveal-delay': `${index * 70}ms` }}
+              >
+                <div className="wcard-ico">
+                  <i className={reason.iconClass}></i>
+                </div>
                 <h4>{reason.title}</h4>
                 <p>{reason.description}</p>
               </div>
@@ -93,7 +120,9 @@ const Transformation = () => {
           <div className="tf-metrics">
             {transformationMetrics.map((metric) => (
               <div className="tf-metric" key={metric.label}>
-                <div className="tf-metric-ico">{metric.icon}</div>
+                <div className="tf-metric-ico">
+                  <i className={metric.iconClass}></i>
+                </div>
                 <div>
                   <div className="tf-metric-val">{metric.value}</div>
                   <div className="tf-metric-lbl">{metric.label}</div>

@@ -1,3 +1,5 @@
+import heroGraphic from '../assets/hero.png'
+
 const stats = [
   { value: '500+', label: 'Transformations Delivered' },
   { value: '98%', label: 'Client Retention' },
@@ -17,8 +19,8 @@ const Hero = () => {
         <div className="hero-inner">
           <div className="hero-badge">
             <span className="pulse"></span>
-            AI-Powered &nbsp;&middot;&nbsp; Microsoft Gold Partner &nbsp;&middot;&nbsp; Digital
-            Transformation
+            AI-Powered &nbsp;&middot;&nbsp; Microsoft Gold Partner &nbsp;&middot;&nbsp;
+            Digital Transformation
           </div>
 
           <h1>
@@ -56,6 +58,12 @@ const Hero = () => {
 
         <div className="hero-visual-wrap">
           <div className="hv-ring"></div>
+          <img
+            src={heroGraphic}
+            alt=""
+            className="hero-graphic hero-graphic-top"
+            aria-hidden="true"
+          />
 
           <div className="hv-img-wrap">
             <img
@@ -80,12 +88,29 @@ const Hero = () => {
             </div>
           </div>
 
+          <div className="hero-mini-panel hero-mini-panel-left reveal">
+            <span className="hero-mini-kicker">AI rollout</span>
+            <strong>Launch copilots faster</strong>
+            <p>Governed prompts, secure data paths, and measurable adoption.</p>
+          </div>
+
           <div className="hv-badge hv-badge-tl">
             <i className="fas fa-check-circle" style={{ color: '#4ADE80' }}></i> 98.9%
             Uptime
           </div>
           <div className="hv-badge hv-badge-br">
             <i className="fas fa-bolt" style={{ color: '#FFB300' }}></i> AI Deployed
+          </div>
+
+          <div className="hero-mini-panel hero-mini-panel-right reveal">
+            <div className="hero-mini-stack">
+              <span className="hero-mini-dot"></span>
+              <span>Secure Microsoft-native workflows</span>
+            </div>
+            <div className="hero-mini-stack">
+              <span className="hero-mini-dot hero-mini-dot-cyan"></span>
+              <span>Automation, analytics, and cloud in one motion</span>
+            </div>
           </div>
         </div>
       </div>

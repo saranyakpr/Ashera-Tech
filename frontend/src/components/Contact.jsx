@@ -71,7 +71,11 @@ const Contact = () => {
         <div className="cf reveal-right">
           <div className="cf-title">Send Us a Message</div>
 
-          <form id="cForm" onSubmit={handleSubmit} style={{ display: submitted ? 'none' : 'block' }}>
+          <form
+            id="cForm"
+            onSubmit={handleSubmit}
+            style={{ display: submitted ? 'none' : 'block' }}
+          >
             <div className="frow">
               <div className="fg">
                 <label htmlFor="first-name">First Name *</label>
@@ -86,7 +90,12 @@ const Contact = () => {
             <div className="frow">
               <div className="fg">
                 <label htmlFor="work-email">Work Email *</label>
-                <input id="work-email" type="email" placeholder="john@company.com" required />
+                <input
+                  id="work-email"
+                  type="email"
+                  placeholder="john@company.com"
+                  required
+                />
               </div>
               <div className="fg">
                 <label htmlFor="phone-number">Phone Number</label>
@@ -132,11 +141,10 @@ const Contact = () => {
             </button>
           </form>
 
-          <div
-            id="successMsg"
-            style={{ display: submitted ? 'block' : 'none' }}
-          >
-            <div className="sico">✅</div>
+          <div id="successMsg" style={{ display: submitted ? 'block' : 'none' }}>
+            <div className="sico">
+              <i className="fas fa-circle-check"></i>
+            </div>
             <div className="stitle">Message Sent!</div>
             <div className="ssub">
               Thank you for reaching out. An Ashera Tech specialist will be in touch

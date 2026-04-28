@@ -60,8 +60,12 @@ const Services = () => {
       </div>
 
       <div className="srv-grid">
-        {services.map((service) => (
-          <div className="srv reveal" key={service.title}>
+        {services.map((service, index) => (
+          <div
+            className="srv reveal"
+            key={service.title}
+            style={{ '--reveal-delay': `${index * 80}ms` }}
+          >
             <div className="srv-glow"></div>
             <div className="srv-ico">
               <i className={service.iconClass}></i>
