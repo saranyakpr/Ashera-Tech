@@ -1,5 +1,7 @@
-import bannerImage from '../assets/banner.png'
 import heroGraphic from '../assets/hero.png'
+
+const aiSectionImage =
+  'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=80'
 
 const featureChips = [
   'RAG Architecture',
@@ -96,7 +98,7 @@ const AICapabilities = () => {
           <div className="ai-visual">
             <div className="ai-visual-preview">
               <img
-                src={bannerImage}
+                src={aiSectionImage}
                 alt="Ashera Tech AI experience preview"
                 className="ai-visual-image"
               />

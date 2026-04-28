@@ -12,10 +12,12 @@ import Transformation from './components/Transformation.jsx'
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 60)
+      setShowScrollTop(window.scrollY > 420)
     }
 
     handleScroll()
@@ -23,6 +25,10 @@ const App = () => {
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,6 +86,14 @@ const App = () => {
       <Process />
       <Contact />
       <Footer />
+      <button
+        type="button"
+        className={`scroll-top-btn ${showScrollTop ? 'visible' : ''}`}
+        aria-label="Scroll back to top"
+        onClick={scrollToTop}
+      >
+        <i className="fas fa-arrow-up"></i>
+      </button>
     </div>
   )
 }

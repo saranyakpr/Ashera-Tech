@@ -1,5 +1,7 @@
-import bannerImage from '../assets/banner.png'
 import heroGraphic from '../assets/hero.png'
+
+const transformationImage =
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80'
 
 const transformationPoints = [
   'Legacy modernisation with zero-downtime migration strategies tailored to your risk tolerance',
@@ -85,7 +87,7 @@ const Transformation = () => {
         <div className="reveal-right">
           <div className="tf-visual">
             <img
-              src={bannerImage}
+              src={transformationImage}
               alt="Microsoft AI transformation workspace"
               className="tf-visual-image"
             />
